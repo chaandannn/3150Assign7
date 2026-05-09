@@ -1,0 +1,30 @@
+# Groot — Personal AI Assistant Configuration
+
+anthropics_api_key: ""       # Or set ANTHROPIC_API_KEY env var
+picovoice_access_key: ""     # Or set PICOVOICE_ACCESS_KEY env var — free at console.picovoice.ai
+
+wake_word:
+  keyword: "jarvis"          # Built-in keyword; replace with custom model when ready
+  # custom_model_path: "models/groot_mac.ppn"
+
+stt:
+  whisper_model: "base.en"   # tiny.en | base.en | small.en | medium.en
+
+tts:
+  # macOS
+  macos_voice: "Samantha"    # Run: say -v '?' to list available voices
+  macos_rate: 200
+  # Linux (pyttsx3)
+  rate: 175
+  voice_id: null             # null = system default
+
+tesla:
+  email: ""                  # Or set TESLA_EMAIL env var
+
+google:
+  credentials_file: "google_credentials.json"
+  token_file: "google_token.pkl"
+
+apple:
+  username: ""               # Apple ID email — or set APPLE_ID env var
+  password: ""               # App-specific password — or set APPLE_APP_PASSWORD env var
